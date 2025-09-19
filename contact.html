@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | My Portfolio</title>
+  <link rel="stylesheet" href="personel.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      // ✅ Replace with your Public Key from EmailJS
+      emailjs.init("Eu7cNr7qYMSH14typ"); 
+    })();
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">My<span>Portfolio</span></h1>
+      
+      <!-- Hamburger Icon -->
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="content">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" name="from_name" placeholder="Your Name" required>
+      <input type="email" id="email" name="reply_to" placeholder="Your Email" required>
+      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="formMessage" style="margin-top:10px; font-weight:bold;"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Aravind</p>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav");
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+
+    // Form validation + EmailJS sending
+    const form = document.getElementById("contactForm");
+    const formMessage = document.getElementById("formMessage");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const email = document.getElementById("email").value.trim();
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailPattern.test(email)) {
+        formMessage.style.color = "red";
+        formMessage.textContent = "❌ Invalid email address!";
+        return;
+      }
+
+      // ✅ Send email via EmailJS
+      emailjs.sendForm("service_h48zj0t", "template_m640x6g", form)
+        .then(() => {
+          formMessage.style.color = "green";
+          formMessage.textContent = "✅ Message sent successfully!";
+          form.reset();
+        }, (error) => {
+          formMessage.style.color = "red";
+          formMessage.textContent = "❌ Failed to send message. Try again later.";
+          console.error("EmailJS Error:", error);
+        });
+    });
+  </script>
+</body>
+</html>

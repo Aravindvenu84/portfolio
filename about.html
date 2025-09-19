@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | My Portfolio</title>
+  <link rel="stylesheet" href="personel.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header>
+  <div class="container">
+    <h1 class="logo">My<span>Portfolio</span></h1>
+    
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <section class="content">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>HI,my name is ARAVIND.I’m a passionate Cybersecurity student with a dream of becoming a top security professional. 
+      My mission is to make the digital world a safer place.  <br>I am currently a student in Brototype Kochi
+      it is my dream to become a Cybersecurity expert . 
+      <br><br> 🎯 Goal: Secure a career with a monthly salary of 80k after completing my course.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025  Aravind</p>
+  </footer>
+  <script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav");
+
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>

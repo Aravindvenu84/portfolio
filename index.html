@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | My Portfolio</title>
+  <link rel="stylesheet" href="personel.css">
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+  <div class="container">
+    <h1 class="logo">My<span>Portfolio</span></h1>
+    
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html" >About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="profile-pic">
+        <img src="aravind.jpg" alt="My Profile Picture">
+      </div>
+      <div class="hero-text">
+        <h2>Hello, I'm <span>Aravind venu</span></h2>
+        <p>Cybersecurity Student | Ethical Hacker in the Making</p>
+        <a href="about.html" class="btn">Discover More</a>
+      </div>
+
+     
+      <div class="social-buttons">
+        <a href="https://www.facebook.com/share/15cuMAu6yA/" target="_blank" class="facebook-btn">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="https://www.instagram.com/arav_ind_45?igsh=OHhma2tjOXR4ODBo" target="_blank" class="instagram-btn">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer>
+    <p>&copy; 2025 Aravind </p>
+  </footer>
+  <script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav");
+
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>

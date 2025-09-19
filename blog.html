@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | My Portfolio</title>
+  <link rel="stylesheet" href="personel.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header>
+  <div class="container">
+    <h1 class="logo">My<span>Portfolio</span></h1>
+    
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <section class="content">
+    <h2>Blog / Achievements</h2>
+    <article>
+      <h3>🏆 Completed Cybersecurity Certification</h3>
+      <p>Earned a recognized certificate in network security.</p>
+    </article>
+    <article>
+      <h3>🛡️ Ethical Hacking Workshop</h3>
+      <p>Hands-on penetration testing experience with real labs.</p>
+    </article>
+    <article>
+      <h3>📚 Published Research</h3>
+      <p>Contributed to a cybersecurity research paper.</p>
+    </article>
+  </section>
+
+  <footer>
+    <p>&copy; 2025  Aravind</p>
+  </footer>
+  <script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav");
+
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>

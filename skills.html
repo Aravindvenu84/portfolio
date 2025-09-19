@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills | My Portfolio</title>
+  <link rel="stylesheet" href="personel.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header>
+  <div class="container">
+    <h1 class="logo">My<span>Portfolio</span></h1>
+    
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html" class="active">Skills</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <section class="content">
+    <h2>My Skills</h2>
+    <ul class="skills-list">
+      <li>Cybersecurity</li>
+      <li>Ethical Hacking</li>
+      <li>Python</li>
+      <li>Networking</li>
+      <li>Linux</li>
+      <li>Web Security</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025  Aravind  </p>
+  </footer>
+  <script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav");
+
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>
+
